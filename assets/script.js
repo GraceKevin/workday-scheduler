@@ -4,7 +4,7 @@ $("#currentDay").html(todaysDate);
 
 $(document).ready(function () {
 
-// On Click Button  
+    // On Click Button  
     $(".saveBtn").on("click", function() {
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
@@ -23,7 +23,7 @@ $(document).ready(function () {
         $(".time-block").each(function () {
 
             // Set Variable for Block of Time
-            var blockTime = parseInt($(this).attr("id").split("#hour")[1]);
+            var blockTime = parseInt($(this).attr("id").split("hour")[1]);
 
             //Check Current Time in order to add background classes
             if (blockTime < currentTime) {
