@@ -18,7 +18,7 @@ $(document).ready(function () {
     function hourStatus() {
         
         // Current Number of Hours 
-        var currentTime = moment().hour();
+        var currentTime = moment().format('YYYY-MM-DD hh:mm');
 
         //console.log(currentTime);
 
