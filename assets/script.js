@@ -11,7 +11,7 @@ $(document).ready(function () {
 
         localStorage.setItem(time, text);
 
-        //console.log(time, text);
+        console.log(time, text);
     })
 
     //  Track Time Function
@@ -20,13 +20,13 @@ $(document).ready(function () {
         // Current Number of Hours 
         var currentTime = moment().hour();
 
-        //console.log(currentTime);
+        console.log(currentTime);
 
         $(".time-block").each(function () {
 
             // Set Variable for Block of Time
             var blockTime = parseInt($(this).attr("id").split("hour")[1]);
-            //console.log(currentTime, blockTime)
+            console.log(currentTime, blockTime)
 
             //Check Current Time in order to add background classes
             if ( blockTime < currentTime ) {
@@ -50,16 +50,16 @@ $(document).ready(function () {
 
     // Retrieve from local storage
 
-    $("#eightAM.description").val(localStorage.getItem("eightAM"));
-    $("#nineAM.description").val(localStorage.getItem("nineAM"));
-    $("#tenAM.description").val(localStorage.getItem("tenAM"));
-    $("#elevenAM.description").val(localStorage.getItem("elevenAM"));
-    $("#twelvePM.description").val(localStorage.getItem("twelvePM"));
-    $("#onePM.description").val(localStorage.getItem("onePM"));
-    $("#twoPM.description").val(localStorage.getItem("twoPM"));
-    $("#threePM.description").val(localStorage.getItem("threePM"));
-    $("#fourPM.description").val(localStorage.getItem("fourPM"));
-    $("#fivePM.description").val(localStorage.getItem("fivePM"));
+    $("#hour8.description").val(localStorage.getItem("hour8"));
+    $("#hour9.description").val(localStorage.getItem("hour9"));
+    $("#hour10.description").val(localStorage.getItem("hour10"));
+    $("#hour11.description").val(localStorage.getItem("hour11"));
+    $("#hour12.description").val(localStorage.getItem("hour12"));
+    $("#hour13.description").val(localStorage.getItem("hour13"));
+    $("#hour14.description").val(localStorage.getItem("hour14"));
+    $("#hour15.description").val(localStorage.getItem("hour15"));
+    $("#hour16.description").val(localStorage.getItem("hour16"));
+    $("#hour17.description").val(localStorage.getItem("hour17"));
 
     hourStatus();
 })
