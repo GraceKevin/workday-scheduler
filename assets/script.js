@@ -18,7 +18,7 @@ $(document).ready(function () {
     function hourStatus() {
         
         // Current Number of Hours 
-        var currentTime = moment().format('LLLL');
+        var currentTime = moment().hour();
 
         $(".time-block").each(function () {
 
@@ -47,16 +47,16 @@ $(document).ready(function () {
 
     // Retrieve from local storage
 
-    $("#8am .description").val(localStorage.getItem("8am"));
-    $("#9am .description").val(localStorage.getItem("9am"));
-    $("#10am .description").val(localStorage.getItem("10am"));
-    $("#11am .description").val(localStorage.getItem("11am"));
-    $("#12pm .description").val(localStorage.getItem("12pm"));
-    $("#1pm .description").val(localStorage.getItem("1pm"));
-    $("#2pm .description").val(localStorage.getItem("2pm"));
-    $("#3pm .description").val(localStorage.getItem("3pm"));
-    $("#4pm .description").val(localStorage.getItem("4pm"));
-    $("#5pm .description").val(localStorage.getItem("5pm"));
+    $("#eightAM.description").val(localStorage.getItem("eightAM"));
+    $("#nineAM.description").val(localStorage.getItem("nineAM"));
+    $("#tenAM.description").val(localStorage.getItem("tenAM"));
+    $("#elevenAM.description").val(localStorage.getItem("elevenAM"));
+    $("#twelvePM.description").val(localStorage.getItem("twelvePM"));
+    $("#onePM.description").val(localStorage.getItem("onePM"));
+    $("#twoPM.description").val(localStorage.getItem("twoPM"));
+    $("#threePM.description").val(localStorage.getItem("threePM"));
+    $("#fourPM.description").val(localStorage.getItem("fourPM"));
+    $("#fivePM.description").val(localStorage.getItem("fivePM"));
 
     hourStatus();
 })
