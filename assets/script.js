@@ -18,7 +18,7 @@ $(document).ready(function () {
     function hourStatus() {
         
         // Current Number of Hours 
-        var currentTime = moment().format('YYYY-MM-DD hh:mm');
+        var currentTime = moment().hour();
 
         //console.log(currentTime);
 
@@ -26,10 +26,10 @@ $(document).ready(function () {
 
             // Set Variable for Block of Time
             var blockTime = parseInt($(this).attr("id").split("hour")[1]);
-            console.log(currentTime, blockTime)
+            //console.log(currentTime, blockTime)
 
             //Check Current Time in order to add background classes
-            if (blockTime < currentTime) {
+            if ( blockTime < currentTime ) {
                 $(this).removeClass("future");
                 $(this).removeClass("present");
                 $(this).addClass("past");
