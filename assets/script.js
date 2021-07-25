@@ -9,8 +9,7 @@ $(document).ready(function () {
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
 
-        localStorage.setItem(time, "id");
-        localStorage.setItem(text, ".description")
+        localStorage.setItem(time, text)
 
         console.log(time, text);
     })
@@ -51,16 +50,17 @@ $(document).ready(function () {
 
     // Retrieve from local storage
 
-    $("#hour8.description").val(localStorage.getItem("hour8"));
-    $("#hour9.description").val(localStorage.getItem("hour9"));
-    $("#hour10.description").val(localStorage.getItem("hour10"));
-    $("#hour11.description").val(localStorage.getItem("hour11"));
-    $("#hour12.description").val(localStorage.getItem("hour12"));
-    $("#hour13.description").val(localStorage.getItem("hour13"));
-    $("#hour14.description").val(localStorage.getItem("hour14"));
-    $("#hour15.description").val(localStorage.getItem("hour15"));
-    $("#hour16.description").val(localStorage.getItem("hour16"));
-    $("#hour17.description").val(localStorage.getItem("hour17"));
+    $("#eight").val(localStorage.getItem("hour8"));
+    $("#nine").val(localStorage.getItem("hour9"));
+    $("#ten").val(localStorage.getItem("hour10"));
+    $("#eleven").val(localStorage.getItem("hour11"));
+    $("#twelve").val(localStorage.getItem("hour12"));
+    $("#one").val(localStorage.getItem("hour13"));
+    $("#two").val(localStorage.getItem("hour14"));
+    $("#three").val(localStorage.getItem("hour15"));
+    $("#four").val(localStorage.getItem("hour16"));
+    $("#five").val(localStorage.getItem("hour17"));
+    console.log($("#hour8"))
 
     hourStatus();
 })
