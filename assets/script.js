@@ -20,10 +20,13 @@ $(document).ready(function () {
         // Current Number of Hours 
         var currentTime = moment().hour();
 
+        //console.log(currentTime);
+
         $(".time-block").each(function () {
 
             // Set Variable for Block of Time
-            var blockTime = parseInt($(this).attr("id").split("hour") [1] );
+            var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+            console.log(currentTime, blockTime)
 
             //Check Current Time in order to add background classes
             if (blockTime < currentTime) {
